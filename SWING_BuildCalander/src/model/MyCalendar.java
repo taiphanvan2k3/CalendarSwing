@@ -77,6 +77,7 @@ public class MyCalendar {
 		return a;
 	}
 
+	//Hàm lấy thứ của 1 ngày bất kì
 	public static int getDayOfWeek(int day, int month, int year) {
 		int thu = getThu(month, year);
 		if ((thu + day - 1) % 7 == 1)
