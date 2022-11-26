@@ -23,6 +23,10 @@ import javax.swing.JTextField;
 
 public class EventCalander extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextField txtDate;
 	private JTextArea txtAreaShowEvent;
 	private String selectedDate;

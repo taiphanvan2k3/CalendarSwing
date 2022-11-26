@@ -22,7 +22,7 @@ import javax.swing.JTextField;
 import model.MyCalendar;
 
 public class CalendarUI extends JFrame implements ActionListener, WindowListener {
-
+	
 	JButton listBtn[][] = new JButton[7][7];
 	private String[] nameOfMonth = { "January", "February", "March", "April", "May", "June", "July", "August",
 			"September", "October", "November", "December" };
@@ -204,7 +204,7 @@ public class CalendarUI extends JFrame implements ActionListener, WindowListener
 			posI_pressed = i;
 			posJ_pressed = j;
 			listBtn[i][j].setBorder(BorderFactory.createMatteBorder(3, 3, 3, 3, Color.red));
-			if(!eventCalander.isVisible()) {
+			if (!eventCalander.isVisible()) {
 				eventCalander.setVisible(true);
 			}
 			eventCalander.updateEvent(DateTime[i][j]);
