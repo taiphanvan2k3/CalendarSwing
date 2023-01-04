@@ -131,8 +131,9 @@ public class EventCalander extends JFrame implements ActionListener {
 
 	public void readEvent() {
 		num = 0;
-		String fileName = "Event.txt";
-		File f = new File(fileName);
+		//Phải mở file kiểu này mới export ra có dữ liệu được
+		//File f=new File(this.getClass().getClassLoader().getResource("dataOutput.txt").getPath());
+		File f=new File("test.txt");
 		try (BufferedReader reader = Files.newBufferedReader(f.toPath(), StandardCharsets.UTF_8)) {
 			String line;
 			while ((line = reader.readLine()) != null) {
@@ -152,7 +153,8 @@ public class EventCalander extends JFrame implements ActionListener {
 	}
 
 	public void writeEvent() {
-		File f = new File("Event.txt");
+		File f=new File("test.txt");
+		//File f = new File(this.getClass().getClassLoader().getResource("dataOutput.txt").getPath());
 		try (FileOutputStream fos = new FileOutputStream(f);
 				OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
 				BufferedWriter writer = new BufferedWriter(osw);) {
@@ -166,7 +168,7 @@ public class EventCalander extends JFrame implements ActionListener {
 			osw.close();
 			fos.close();
 		} catch (IOException e) {
-
+			
 		}
 	}
 }
