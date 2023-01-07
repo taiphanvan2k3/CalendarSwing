@@ -154,7 +154,6 @@ public class EventCalander extends JFrame implements ActionListener {
 
 	public void writeEvent() {
 		File f=new File("test.txt");
-		//File f = new File(this.getClass().getClassLoader().getResource("dataOutput.txt").getPath());
 		try (FileOutputStream fos = new FileOutputStream(f);
 				OutputStreamWriter osw = new OutputStreamWriter(fos, StandardCharsets.UTF_8);
 				BufferedWriter writer = new BufferedWriter(osw);) {
